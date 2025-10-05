@@ -1,4 +1,4 @@
-package Person;
+package ru.yandex.practicum.oopera.person;
 
 public class Director extends Person {
     private int numberOfShows;
@@ -8,10 +8,8 @@ public class Director extends Person {
         this.numberOfShows = numberOfShows;
     }
 
-    @Override
-    public String toString() {
-        return "Director: " +
-                name +
-                " " + surname;
+    public void printDirector(){
+        System.out.println("Director: " + name + " " + surname);
     }
+
 }

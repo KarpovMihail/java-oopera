@@ -1,10 +1,10 @@
-package Show;
+package ru.yandex.practicum.oopera.show;
 
-import Person.*;
+import ru.yandex.practicum.oopera.person.*;
 
 public class MusicalShow extends Show {
-    private Person musicAuthor;
-    private String librettoText;
+    protected Person musicAuthor;
+    protected String librettoText;
 
     public MusicalShow(String title, int duration, Director director, Person musicAuthor, String librettoText) {
         super(title, duration, director);

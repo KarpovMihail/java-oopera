@@ -1,9 +1,12 @@
-import Person.*;
-import Show.*;
+package ru.yandex.practicum.oopera;
+
+import ru.yandex.practicum.oopera.person.*;
+import ru.yandex.practicum.oopera.show.*;
 
 public class Main {
     public static void main(String[] args) {
         Actor actor1 = new Actor("Mihail", "Karpov", Gender.MALE, 174);
+        Actor actor4 = new Actor("Oleg", "Karpov", Gender.MALE, 180);
         Actor actor2 = new Actor("Anna", "Belousova", Gender.FEMALE, 168);
         Actor actor3 = new Actor("Valentina", "Romashko", Gender.FEMALE, 170);
 
@@ -19,26 +22,28 @@ public class Main {
 
         show.addActorToShow(actor1);
         show.addActorToShow(actor2);
+        show.addActorToShow(actor4);
         show.addActorToShow(actor2);
         ballet.addActorToShow(actor2);
         ballet.addActorToShow(actor3);
         opera.addActorToShow(actor1);
         opera.addActorToShow(actor3);
 
-        System.out.println(show);
-        System.out.println(ballet);
-        System.out.println(opera);
+        show.printActorsList();
+        ballet.printActorsList();
+        opera.printActorsList();
 
         opera.replaceActor(actor2, "Romashko");
-        System.out.println(opera);
+        opera.printActorsList();
         ballet.replaceActor(actor1, "Orlov");
-        System.out.println(ballet);
+        ballet.printActorsList();
+        show.replaceActor(actor3, "Karpov");
 
         ballet.printLibrettoText();
         opera.printLibrettoText();
 
-        System.out.println(director1);
-        System.out.println(director2);
+        director1.printDirector();
+        director2.printDirector();
     }
 }
 

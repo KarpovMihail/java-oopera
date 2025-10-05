@@ -1,6 +1,6 @@
-package Show;
+package ru.yandex.practicum.oopera.show;
 
-import Person.*;
+import ru.yandex.practicum.oopera.person.*;
 
 public class Opera extends MusicalShow {
     private int choirSize;
