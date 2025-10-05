@@ -6,10 +6,10 @@ import ru.yandex.practicum.oopera.person.Director;
 import java.util.ArrayList;
 
 public class Show {
-    private String title;
-    private int duration;
-    private Director director;
-    private ArrayList<Actor> listOfActors;
+    protected String title;
+    protected int duration;
+    protected Director director;
+    protected ArrayList<Actor> listOfActors;
 
 
     public Show(String title, int duration, Director director) {

@@ -10,21 +10,6 @@ public class Actor extends Person {
         this.height = height;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Actor actor = (Actor) o;
-//        return height == actor.height &&
-//                name.equals(actor.name) &&
-//                surname.equals(actor.surname;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(name, surname, height);
-//    }
-
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
