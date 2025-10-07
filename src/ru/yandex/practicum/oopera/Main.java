@@ -42,8 +42,9 @@ public class Main {
         ballet.printLibrettoText();
         opera.printLibrettoText();
 
-        director1.printDirector();
-        director2.printDirector();
+        show.printDirector();
+        ballet.printDirector();
+        opera.printDirector();
     }
 }
 

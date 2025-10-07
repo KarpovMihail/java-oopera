@@ -1,5 +1,7 @@
 package ru.yandex.practicum.oopera.person;
 
+import java.util.Objects;
+
 public class Director extends Person {
     private int numberOfShows;
 
@@ -8,8 +10,22 @@ public class Director extends Person {
         this.numberOfShows = numberOfShows;
     }
 
-    public void printDirector(){
-        System.out.println("Director: " + name + " " + surname);
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Director director = (Director) o;
+        return numberOfShows == director.numberOfShows;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), numberOfShows);
+    }
+
+    @Override
+    public String toString() {
+        return "Director: " + super.toString() + ", " +
+                "numberOfShows = " + numberOfShows;
+    }
 }

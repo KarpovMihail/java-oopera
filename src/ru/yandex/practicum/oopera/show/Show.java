@@ -34,7 +34,7 @@ public class Show {
         Actor actorToReplace = null;
 
         for (Actor actorFromList : listOfActors) {
-            if (actorFromList.getSurname().equals(surname)){
+            if (actorFromList.getSurname().equals(surname)) {
                 actorToReplace = actorFromList;
                 sumActorsToReplace++;
             }
@@ -42,7 +42,7 @@ public class Show {
 
         if (actorToReplace == null) {
             System.out.println("Такого актера нет в списке.");
-        } else if ( sumActorsToReplace > 1) {
+        } else if (sumActorsToReplace > 1) {
             System.out.println("Актеров с такой фамилией больше одного.");
         } else {
             listOfActors.remove(actorToReplace);
@@ -50,8 +50,11 @@ public class Show {
         }
     }
 
+    public void printDirector() {
+        System.out.println(director.toString());
+    }
+
     public void printActorsList() {
-        System.out.println(getClass().getSimpleName() + " " +
-                " actor list:" + listOfActors);
+        System.out.println("Список актеров: " + listOfActors);
     }
 }
